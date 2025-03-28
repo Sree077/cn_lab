@@ -5,6 +5,7 @@ int main() {
     int total_frames;
     int window_size;
     int total_transmissions = 0;
+    int frame;
     
     srand(time(NULL));
 
@@ -18,17 +19,13 @@ int main() {
     while (current_frame <= total_frames) {
         int successfully_acked = 0;
 
-        for (int frame = current_frame; 
-             frame < current_frame + window_size && frame <= total_frames; 
-             frame++) 
+        for (frame = current_frame;  frame < current_frame + window_size && frame <= total_frames; frame++) 
         {
             printf("Sending Frame %d\n", frame);
             total_transmissions++;
         }
 
-        for (int frame = current_frame;
-             frame < current_frame + window_size && frame <= total_frames;
-             frame++)
+        for (int frame = current_frame; frame < current_frame + window_size && frame <= total_frames; frame++)
         {
             int is_ack_received = rand() % 2;
 

@@ -14,7 +14,7 @@ int main(){
     printf("Enter Total Frames: ");
     scanf("%d", &total_frames);
 
-    while ( current_frame <= total_frames){
+    while ( current_frame <= total_frames ){
         printf("\nSending Frame: %d\n", current_frame);
         total_transmissions++;
 

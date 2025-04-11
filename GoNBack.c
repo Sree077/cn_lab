@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <time.h>
 #include <unistd.h>
+
 int main() {
     int total_frames;
     int window_size;
